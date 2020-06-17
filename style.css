@@ -1,0 +1,102 @@
+body{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	background: rgba(0,0,0,0.4);
+}
+
+section{
+	height: 300px;
+	width: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	animation: animationCircle 8s linear infinite;
+}
+div{
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.4)
+}
+.circle{
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	background: #61dafb;
+	border-radius: 50%;
+	animation: animationToNho 3s linear infinite;
+}
+
+.around{
+	position: absolute;
+	height: 300px;
+	width: 300px;
+
+	border-radius: 100%;
+	border-top: 10px solid #61dafb;
+	border-left: 10px solid #61dafb;
+}
+
+.theme1{
+	transform: rotateZ(120deg) rotateX(65deg);
+	animation: animation1 2s linear infinite;
+}
+.theme2{
+
+	transform: rotateZ(240deg) rotateX(65deg);
+	animation: animation2 2s linear infinite;
+}
+.theme3{
+
+	transform: rotateZ(360deg) rotateX(65deg);
+	animation: animation3 2s linear infinite;
+}
+
+@keyframes animation1{
+	0%{
+		transform: rotateZ(120deg) rotateX(65deg) rotateZ(0deg)
+	}
+	100%{
+		transform: rotateZ(120deg) rotateX(65deg) rotateZ(360deg)
+	}
+}
+@keyframes animation2{
+	0%{
+		transform: rotateZ(240deg) rotateX(65deg) rotateZ(0deg)
+	}
+	100%{
+		transform: rotateZ(240deg) rotateX(65deg) rotateZ(360deg)
+	}
+}
+
+@keyframes animation3{
+	0%{
+		transform: rotateZ(360deg) rotateX(65deg) rotateZ(0deg)
+	}
+	100%{
+		transform: rotateZ(360deg) rotateX(65deg) rotateZ(360deg)
+	}
+}
+
+@keyframes animationCircle{
+	0%{
+		transform: rotateZ(0deg);
+	}
+	100%{
+		transform: rotateZ(360deg);
+	}
+} 
+
+
+@keyframes animationToNho{
+	0%,40%,80%{
+		transform: scale(0.9);
+	}
+	20%,60%,100%{
+		transform: scale(1);
+	}
+}
+
+
